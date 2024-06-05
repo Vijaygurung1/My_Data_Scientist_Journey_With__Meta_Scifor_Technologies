@@ -1,0 +1,29 @@
+#Question 3:- [ "Functions" ] - [ Function to determine whether a date is valid or not ]
+
+#The below function is to determine whether a date is valid or not.
+
+#This the outcome of these code :- [ Date '2022-07-25' is valid ]
+
+from datetime import datetime
+
+def is_valid_date(date_string):
+    """
+    Determine whether a date string is valid.
+    
+    Args:
+        date_string (str): The date string in the format 'YYYY-MM-DD'.
+    
+    Returns:
+        bool: Whether the date is valid.
+    """
+    try:
+        datetime.strptime(date_string, '%Y-%m-%d')
+        return True
+    except ValueError:
+        return False
+        
+date_string = '2022-07-25'
+is_valid = is_valid_date(date_string)
+print(f"Date '{date_string}' is {'valid' if is_valid else 'invalid'}")
+
+
