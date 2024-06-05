@@ -1,0 +1,31 @@
+# Question 2:-
+{ To assign grade based on score (0-100) using nested if-else }
+
+Below is the code for this question !
+
+# If you enter a score of [85], As a outcome we will get the students grade - [B].
+# If you enter a score of [-10], As a outcome we will get the Invalid score. Which means the score must be between [ 0 and 100 ]
+
+
+def assign_grade(score):
+    # Check if the score is invalid
+    if score < 0 or score > 100:
+        return "Invalid score. Score must be between 0 and 100."
+
+    if score >= 90:   # Check if the score is an A
+        return "A"
+    
+    elif score >= 80: # Check if the score is a B
+        return "B"
+    
+    elif score >= 70:  # Check if the score is a C
+        return "C"
+    
+    elif score >= 60:  # Check if the score is a D
+        return "D"
+    else:              # If the score is less than 60, it's an F
+        return "F"
+
+student_score = float(input("Enter the student's score (0-100): "))  # Ask the user for their score
+
+print(f"The student's grade is: {assign_grade(student_score)}")       # Print the student's grade
