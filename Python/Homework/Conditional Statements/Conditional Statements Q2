@@ -1,7 +1,8 @@
 # Question 2:-
-{ To assign grade based on score (0-100) using nested if-else }
 
-Below is the code for this question !
+# { To assign grade based on score (0-100) using nested if-else }
+
+# Below is the code for this question !
 
 # If you enter a score of [85], As a outcome we will get the students grade - [B].
 # If you enter a score of [-10], As a outcome we will get the Invalid score. Which means the score must be between [ 0 and 100 ]
