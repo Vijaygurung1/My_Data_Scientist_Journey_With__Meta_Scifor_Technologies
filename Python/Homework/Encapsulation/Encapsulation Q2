@@ -1,0 +1,51 @@
+Question :- 2 [ Encapsulation ]
+
+[ Creating a class "BankAccount" to encapsulate the balance of the account ]
+
+#The class encapsulates the balance by storing it as an instance variable (self.balance) and providing methods to manipulate it.
+
+#This encapsulation helps to maintain data integrity and ensures that the balance is updated correctly.
+
+# This is an outcome that, we will receive once we execute the below code.
+
+# Outcome :- 
+# [ Deposited $500. New balance: $1500 ]
+# [ Withdrew $200. New balance: $1300 ]
+# [ Current balance: $1300 ]
+
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        """
+        Initialize the bank account with an initial balance.
+        """
+        self.balance = initial_balance
+
+    def deposit(self, amount):
+        """
+        Deposit an amount into the account.
+        """
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited ${amount}. New balance: ${self.balance}")
+
+    def withdraw(self, amount):
+        """
+        Withdraw an amount from the account.
+        """
+        if amount > 0 and amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew ${amount}. New balance: ${self.balance}")
+        else:
+            print("Insufficient balance.")
+
+    def check_balance(self):
+        
+     # Check the current balance of the account.
+       
+        print(f"Current balance: ${self.balance}")
+        
+
+account = BankAccount(1000)    # Create an account with initial balance of $1000
+account.deposit(500)           # Deposit $500
+account.withdraw(200)          # Withdraw $200
+account.check_balance()        # Check the current balance
