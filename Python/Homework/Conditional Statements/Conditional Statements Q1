@@ -1,0 +1,18 @@
+Question No1 :- Conditional Statements :-
+
+# if you enter the number 5, the program will print [5] is an ( Odd number).
+# If you enter the number 4, the program will print [4] is an ( Even number).
+
+Below is the code :-
+
+def is_odd(n):
+    if n % 2 != 0:
+        return True
+    else:
+        return False
+num = int(input("Enter a number: ")) 
+
+if is_odd(num):
+    print(f"{num} is an odd number.")
+else:
+    print(f"{num} is an even number.")
