@@ -18,6 +18,13 @@
 
 # Implementation :-
 
+# The implementation of encapsulation in Python is shown in the BankAccount class. The class has three methods: [ Deposit, Withdraw and get_balance].
+# The __balance attribute is the data that is encapsulated within the class. The methods operate on this data, but the data itself is hidden from the outside world.
+# This code demonstrates the basics of encapsulation in Python, including the concept of bundling data and methods within a single unit, and providing a
+# controlled interface to access and modify the data.
+
+
+# Below is the code for these question.
 
 class BankAccount:
 
