@@ -1,0 +1,85 @@
+# Problem statement :- 
+
+[ Use_Case_OOPs_( Ban_Account ) - We have a "Bank_Class". It is able to withdraw money and deposit money after verifying PIN ]
+
+
+  class Bank:
+  def __init__(self,pin,balance):
+    self.__pin = pin
+    self.__balance = balance
+
+  def verify_pin(self,pin):
+    if not(isinstance(pin,int)):
+      return False
+    elif pin == self.__pin:
+      return True
+    else:
+      return False
+
+  def display_balance(self):
+    pin = int(input("Enter PIN: "))
+    if self.verify_pin(pin):
+      print("PIN Verified!")
+      print(f"Balance: {self.__balance}")
+    else:
+      print("Invalid PIN")
+  
+  def withdraw(self):
+    pin = int(input("Enter PIN: "))
+    
+    if self.verify_pin(pin):
+      print("PIN Verified!")
+      print(f"Current balance: {self.__balance}")
+      amount = float(input("Enter amount to withdraw: "))
+      if amount <= self.__balance:
+        self.__balance -= amount
+        print(f"Amount withdrawn: {amount}")
+        check_balance = input("Do you want to check the balance? (yes/no): ")
+        if check_balance.lower() == "yes":
+          print(f"Updated Balance : {self.__balance}")
+      else:
+        print("Insufficient balance")
+    else:
+      print("Invalid PIN")
+
+  def deposit(self):
+    pin = int(input("Enter PIN: "))
+   
+    if self.verify_pin(pin):
+      print("PIN Verified!")
+      print(f"Current balance: {self.__balance}")
+      amount = float(input("Enter amount to deposit: "))
+      self.__balance += amount
+      print(f"Amount deposited: {amount}")
+      check_balance = input("Do you want to check the balance? (yes/no): ")
+      if check_balance.lower() == "yes":
+        print(f"Updated Balance : {self.__balance}")
+    else:
+      print("Invalid PIN")
+
+bank = Bank(2121,10000)
+bank.withdraw()
+bank.deposit()
+bank.display_balance()
+
+
+# [ Output of the above query as below :- 
+
+
+Enter PIN: 2121
+PIN Verified!
+Current balance: 10000
+Enter amount to withdraw: 2000
+Amount withdrawn: 2000.0
+Do you want to check the balance? (yes/no): yes
+Updated Balance : 8000.0
+Enter PIN: 2121
+PIN Verified!
+Current balance: 8000.0
+Enter amount to deposit: 2000
+Amount deposited: 2000.0
+Do you want to check the balance? (yes/no): yes
+Updated Balance : 10000.0
+Enter PIN: 2121
+PIN Verified!
+Balance: 10000.0 
