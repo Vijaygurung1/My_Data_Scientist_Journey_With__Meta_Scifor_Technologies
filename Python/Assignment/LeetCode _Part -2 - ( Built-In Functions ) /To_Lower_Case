@@ -1,0 +1,52 @@
+# This below is the problem statement :- [ To Lower Case ]
+
+Easy
+Topics
+Companies
+Hint
+Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
+
+Example 1:
+
+Input: s = "Hello"
+Output: "hello"
+
+Example 2:
+
+Input: s = "here"
+Output: "here"
+Example 3:
+
+Input: s = "LOVELY"
+Output: "lovely"
+ 
+Constraints:
+
+1 <= s.length <= 100
+s consists of printable ASCII characters.
+
+
+# Below is the code for the above question :-
+
+class Solution(object):
+    def toLowerCase(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        # Use the built-in lower() method to convert the string to lowercase
+        return s.lower()
+
+# Example usage:
+solution = Solution()
+print(solution.toLowerCase("Hello"))   # Output: "hello"
+print(solution.toLowerCase("here"))    # Output: "here"
+print(solution.toLowerCase("LOVELY"))  # Output: "lovely"
+
+
+# This below is the outcome of the above code 
+
+hello
+here
+lovely
+
